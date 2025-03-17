@@ -38,14 +38,17 @@ const Calculator = ({
                     <TanCard people={people} selectedOptions={selectedOptions} setSelectedOptions={setSelectedOptions} />                    
                 </div>
                 <div className="price-container">
+                    <hr />
                     <div className="deposit">
                         <label>Deposit/Travel Fee:</label>
                         <p>${travelCost}</p>
                     </div>
+                    <hr />
                     <div className="per-person">
                         <label>Total cost per person (including deposit):</label>
                         <p>${(price/people).toFixed(2)}</p>                    
                     </div>
+                    <hr />
                     <div className="total">
                         <label>Total Price:</label>
                         <p>${price}</p>

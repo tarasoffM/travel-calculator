@@ -27,3 +27,24 @@
     background-color: #212c50;
     color: rgb(182, 182, 182);
 }
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+p {
+    color: rgb(202, 202, 202);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid rgb(202, 202, 202);
+    margin: 0.5rem 0;
+}
