@@ -1,0 +1,8 @@
+.tan-card {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    height: 100px;
+    background-color: #212c50;
+    margin-top: 20px;
+}
