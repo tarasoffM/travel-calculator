@@ -25,6 +25,9 @@ const TanCard = ({ people, selectedOptions, setSelectedOptions }) => {
                         <option value="silk">Silk</option>
                         <option value="rapid">Rapid</option>
                     </select>
+                    <div className="tan-card-content">
+                        <h1>{selectedOptions[index]}</h1>
+                    </div>
                 </div>
             ))}
         </div>
