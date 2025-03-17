@@ -1,7 +1,16 @@
+.tan-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
 .tan-card {
     display: flex;
     flex-direction: column;
-    width: 40rem;
+    width: 100%;
     height: 100px;
     background-color: #212c50;
     margin-top: 10px;
