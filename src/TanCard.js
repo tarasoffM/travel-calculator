@@ -22,8 +22,8 @@ const TanCard = ({ people, selectedOptions, setSelectedOptions }) => {
                         value={selectedOptions[index]}
                         onChange={(event) => handleDropdownChange(index, event)}
                         >
-                        <option value="silk">Silk</option>
-                        <option value="rapid">Rapid</option>
+                        <option value="Silk/Clear">Silk/Clear</option>
+                        <option value="Regular">Regular</option>
                     </select>
                     <div className="tan-card-content">
                         <h1>{selectedOptions[index]}</h1>

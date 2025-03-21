@@ -15,7 +15,7 @@ function App() {
   const basePrice = 75;
   const pricePerMile = 5;
   const priceSilk = 75;
-  const priceRapid = 60;
+  const priceRegular = 60;
 
   // Calculate price based on inputs
   const calculatePrice = () => {
@@ -28,10 +28,10 @@ function App() {
     }
 
     selectedOptions.forEach((tan) => {
-      if (tan === 'silk') {
+      if (tan === 'silk/clear') {
         tanCost += priceSilk;
       } else {
-        tanCost += priceRapid;
+        tanCost += priceRegular;
       }
     });
 

@@ -17,7 +17,7 @@ const Calculator = ({
         setPeople(newPeople);
         
         if (newPeople > selectedOptions.length) {
-            setSelectedOptions([...selectedOptions, ...Array(newPeople - selectedOptions.length).fill('silk')]);
+            setSelectedOptions([...selectedOptions, ...Array(newPeople - selectedOptions.length).fill('Silk/Clear')]);
 
         } else {
             setSelectedOptions(selectedOptions.slice(0, newPeople));
