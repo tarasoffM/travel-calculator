@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TanCard from './TanCard';
 import './Calculator.css';
 
@@ -10,7 +10,10 @@ const Calculator = ({
                     price, 
                     selectedOptions,
                     setSelectedOptions,
-                    travelCost }) => {
+                    travelCost
+                 }) => {
+
+    const [showWithDeposit, setShowWithDeposit] = useState(true);
 
     const handlePeopleChange = ({ target }) => {                  
         const newPeople = parseInt(target.value);
@@ -45,8 +48,16 @@ const Calculator = ({
                     </div>
                     <hr />
                     <div className="per-person">
-                        <label>Total cost per person (including deposit):</label>
-                        <p>${(price/people).toFixed(2)}</p>                    
+                        <label>Total cost per person:</label>
+                        <p>${showWithDeposit ? ((price / people) + (travelCost / people)).toFixed(2) : (price / people).toFixed(2)}</p>
+                        <label>
+                            <input 
+                                type="checkbox" 
+                                checked={showWithDeposit} 
+                                onChange={() => setShowWithDeposit(!showWithDeposit)} 
+                            />
+                            Include deposit
+                        </label>
                     </div>
                     <hr />
                     <div className="total">

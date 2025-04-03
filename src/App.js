@@ -10,9 +10,9 @@ function App() {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [travelCost, setTravelCost] = useState(0);
   const [price, setPrice] = useState(0);
+  const [includeDeposit, setIncludeDeposit] = useState(false);
 
   // Pricing constants
-  const basePrice = 75;
   const pricePerMile = 5;
   const priceSilk = 75;
   const priceRegular = 60;
@@ -28,7 +28,7 @@ function App() {
     }
 
     selectedOptions.forEach((tan) => {
-      if (tan === 'silk/clear') {
+      if (tan === 'Silk/Clear') {
         tanCost += priceSilk;
       } else {
         tanCost += priceRegular;
@@ -61,6 +61,8 @@ function App() {
         selectedOptions={selectedOptions}
         setSelectedOptions={setSelectedOptions}
         travelCost={travelCost}
+        includeDeposit={includeDeposit}
+        setIncludeDeposit={setIncludeDeposit}
       />
     </div>
   );
